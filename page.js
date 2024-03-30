@@ -45,8 +45,17 @@ JavaScript is a core technology of the web, and it is supported by all modern we
 In this post, we'll cover the basics of JavaScript, including its syntax, data types, control flow, and functions. By the end of this post, you'll have a good understanding of the fundamental concepts of JavaScript and be ready to start writing your own JavaScript code.`,
         },
       ],
+      darkMode: false,
     };
   },
+  methods: {
+    toggleDarkMode() {
+      // Toggle dark mode state
+      this.darkMode = !this.darkMode;
+      // Add or remove 'dark' class from body based on darkMode state
+      document.body.classList.toggle('dark', this.darkMode);
+    }
+  }
 }).mount("#app");
 
 window.randomUnsplash = async function () {
